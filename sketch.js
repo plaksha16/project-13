@@ -9,8 +9,9 @@ function preload() {
   arrowImage = loadImage("arrow0.png");
   bowImage = loadImage("bow0.png");
   red_balloonImage = loadImage("red_balloon0.png");
-  blue_bolloonImage = loadImage("blue_balloon0.png");
+  blue_balloonImage = loadImage("blue_balloon0.png");
   green_balloonImage = loadImage("green_balloon0.png");
+  pink_balloonImage=loadImage("pink_balloon0.png")
 }
 
 
@@ -58,10 +59,10 @@ function draw() {
   }
  
 
-  //if (World.frameCount % 90 == 0) {
-  //if (select_balloon == 1) 
-  // blueBalloon();
- // }
+  if (World.frameCount % 90 == 0) {
+  if (select_balloon == 1) 
+   blueBalloon();
+ }
 
 
  
@@ -73,11 +74,11 @@ function draw() {
   }
 
   
-  // if (World.frameCount % 80 == 0) {
-  //  if (select_balloon == 1) {
-  //    pinkBalloon();
-  // }
-  // }
+   if (World.frameCount % 80 == 0) {
+    if (select_balloon == 1) {
+      pinkBalloon();
+   }
+   }
   
   drawSprites();
   text ("score:" + score,270,30)
@@ -105,13 +106,13 @@ function redBalloon() {
 
 }
 
-//function blueBalloon(){
-//var blue = createSprite(0, Math.round(random(30, 300)), 10, 10);
-//blue.addImage(blue_balloonImage);
-//blue.velocityX = 3;
-//blue.lifetime = 150
-//blue.scale = 0.1
-//}
+function blueBalloon(){
+var blue = createSprite(0, Math.round(random(30, 300)), 10, 10);
+blue.addImage(blue_balloonImage);
+blue.velocityX = 3;
+blue.lifetime = 150
+blue.scale = 0.1
+}
 
 
 
@@ -123,10 +124,10 @@ function greenBalloon() {
   green.scale = 0.1;
 }
 
-//function pinkBalloon() {
- // var pink = createSprite(0, Math.round(random(30, 200)), 10, 10);
-  //pink.addImage(pink_balloonImage);
- // pink.velocityX = 3
- //// pink.lifetime = 150;
- // pink.scale = 0.1;
-//}
+function pinkBalloon() {
+  var pink = createSprite(0, Math.round(random(30, 200)), 10, 10);
+  pink.addImage(pink_balloonImage);
+  pink.velocityX = 3
+  pink.lifetime = 150;
+  pink.scale = 0.1;
+}
